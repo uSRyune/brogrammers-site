@@ -27,10 +27,7 @@ map:
 
 <!-- Chart code -->
 <script>
-var yes=0;
-var no =0;
-
-
+var data=0;
 $.ajax({ 
     type: 'GET', 
     url: 'https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote', 
@@ -41,26 +38,24 @@ $.ajax({
             $('body').append($('<div>', {
                 text: element.name
             }));
-          
           console.log("Success calling Shane's API");
           console.log(data);
-
           console.log("yes ---->" + data['yes']);
           console.log("no ---->" + data['no']);
           console.log("Item ---->" + data['Item']['yes']);
-          
-          yes = data['Item']['yes'];
-          no = data['Item']['no'];
-          
-          var chart = AmCharts.makeChart( "chartdiv", {
+        });
+    }
+});
+  
+var chart = AmCharts.makeChart( "chartdiv", {
   "type": "pie",
   "theme": "light",
   "dataProvider": [ {
     "vote": "Agree",
-    "value": yes
+    "value": data['Item']['yes']
   }, {
     "vote": "Disagree",
-    "value": no
+    "value": data['Item']['no']
   }],
   "valueField": "value",
   "titleField": "vote",
@@ -72,12 +67,6 @@ $.ajax({
     "enabled": true
   }
 } );
-         
-  
-    }
-});
-  
-
 </script>
 
 <!-- HTML -->
