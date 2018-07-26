@@ -27,7 +27,7 @@ map:
 
 <!-- Chart code -->
 <script>
-
+var data=0;
 $.ajax({ 
     type: 'GET', 
     url: 'https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote', 
@@ -53,10 +53,10 @@ var chart = AmCharts.makeChart( "chartdiv", {
   "theme": "light",
   "dataProvider": [ {
     "vote": "Agree",
-    "value": 50
+    "value": data['Item']['yes']
   }, {
     "vote": "Disagree",
-    "value": 50
+    "value": data['Item']['no']
   }],
   "valueField": "value",
   "titleField": "vote",
