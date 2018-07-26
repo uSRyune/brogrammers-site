@@ -15,8 +15,8 @@ var stlen = 3;
 var stx = 0;
 var stpos = 0;
 var stspeed = 500;
-var stdelay = 0;
-var stpause = false;
+var stdelay = 5000;
+var stpause = true;
 var stto = null;
 var stwidth = 400;
 
@@ -27,8 +27,10 @@ function sliderTopRun() {
     }
     if(stto) clearTimeout(stto);
     stto = setTimeout(sliderTopNext, stdelay);
+    stpause = true;
 }
 function sliderTopPrev() {
+    stpause=false;
     if(!stpause) {
         stpos--;
         if(stpos < 0) stpos = stlen - 1;
@@ -36,6 +38,7 @@ function sliderTopPrev() {
     sliderTopRun();
 }
 function sliderTopNext() {
+    stpause = false;
     if(!stpause) {
         stpos++;
         if(stpos >= stlen) stpos = 0;
