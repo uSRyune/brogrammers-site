@@ -6,7 +6,8 @@
  </g>
  <g>
   <title>Layer 1</title>
-  <path id="svg_1" d="m42.493,26.625c-19.456,0 -35.375,15.919 -35.375,35.375s15.919,35.375 35.375,35.375s35.375,-15.919 35.375,-35.375s-15.919,-35.375 -35.375,-35.375zm3.537,7.322c12.769,1.592 22.925,11.779 24.514,24.516l-24.514,0l0,-24.516zm-31.837,28.053c0,-14.361 10.858,-26.318 24.763,-28.053l0,56.139c-13.904,-1.77 -24.763,-13.723 -24.763,-28.086zm31.837,28.051l0,-24.514l24.514,0c-1.589,12.77 -11.745,22.925 -24.514,24.514z"/>
-  <text style="cursor: move;" font-weight="bold" stroke="null" transform="matrix(2.0124380588531494,0,0,1.9818181991577148,-84.15891364216805,-44.18181896209717) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_7" y="69.018349" x="80.143542" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#000000">ctank Media</text>
+  <path fill="#ffffff" id="svg_1" d="m38.493,2.625c-19.456,0 -35.375,15.919 -35.375,35.375s15.919,35.375 35.375,35.375s35.375,-15.919 35.375,-35.375s-15.919,-35.375 -35.375,-35.375zm3.537,7.322c12.769,1.592 22.925,11.779 24.514,24.516l-24.514,0l0,-24.516zm-31.837,28.053c0,-14.361 10.858,-26.318 24.763,-28.053l0,56.139c-13.904,-1.77 -24.763,-13.723 -24.763,-28.086zm31.837,28.051l0,-24.514l24.514,0c-1.589,12.77 -11.745,22.925 -24.514,24.514z"/>
+  <text font-weight="bold" stroke="null" transform="matrix(2.0124380588531494,0,0,1.9818181991577148,-84.15891364216805,-44.18181896209717) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_7" y="55.394496" x="80.143542" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#ffffff">CTANK</text>
+  <text font-weight="bold" stroke="null" transform="matrix(2.0124380588531494,0,0,1.9818181991577148,-84.15891364216805,-44.18181896209717) " xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" id="svg_9" y="77.59633" x="135.797429" fill-opacity="null" stroke-opacity="null" stroke-width="0" fill="#ffffff">MEDIA</text>
  </g>
 </svg>
