@@ -37,8 +37,9 @@ map:
 $(".btn").on("click", function() {
     $(".alert").removeClass("in").show();
 	$(".alert").delay(200).addClass("in").fadeOut(2000);
+	if (this.id == "agree-btn-1" || this.id == "disagree-btn-1"){
 	$('#agree-btn-1').prop('disabled', true);
-	$('#disagree-btn-1').prop('disabled', true);
+	$('#disagree-btn-1').prop('disabled', true);}
 });	
 </script>
 
@@ -71,8 +72,9 @@ $(".btn").on("click", function() {
 $(".btn").on("click", function() {
     $(".alert").removeClass("in").show();
 	$(".alert").delay(200).addClass("in").fadeOut(2000);
+		if (this.id == "agree-btn-2" || this.id == "disagree-btn-2"){
 	$('#agree-btn-2').prop('disabled', true);
-	$('#disagree-btn-2').prop('disabled', true);
+	$('#disagree-btn-2').prop('disabled', true);}
 });	
 </script>	
 </div>
@@ -104,8 +106,9 @@ $(".btn").on("click", function() {
 $(".btn").on("click", function() {
     $(".alert").removeClass("in").show();
 	$(".alert").delay(200).addClass("in").fadeOut(2000);
+		if (this.id == "agree-btn-3" || this.id == "disagree-btn-3"){
 	$('#agree-btn-3').prop('disabled', true);
-	$('#disagree-btn-3').prop('disabled', true);
+	$('#disagree-btn-3').prop('disabled', true);}
 });	
 </script>
 	
