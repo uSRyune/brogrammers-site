@@ -40,6 +40,17 @@ $(".btn").on("click", function() {
 	if (this.id == "agree-btn-1" || this.id == "disagree-btn-1"){
 	$('#agree-btn-1').prop('disabled', true);
 	$('#disagree-btn-1').prop('disabled', true);}
+	
+	if(this.id == "agree-btn-1"){
+		$.post("https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote",
+    JSON.stringify({videoid : "1", vote : "yes"}));
+	}
+	
+		if(this.id == "disagree-btn-1"){
+		$.post("https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote",
+    JSON.stringify({videoid : "1", vote : "no"}));
+	}
+	
 });	
 </script>
 
@@ -75,6 +86,16 @@ $(".btn").on("click", function() {
 		if (this.id == "agree-btn-2" || this.id == "disagree-btn-2"){
 	$('#agree-btn-2').prop('disabled', true);
 	$('#disagree-btn-2').prop('disabled', true);}
+	
+		if(this.id == "agree-btn-2"){
+		$.post("https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote",
+    JSON.stringify({videoid : "2", vote : "yes"}));
+	}
+	
+		if(this.id == "disagree-btn-2"){
+		$.post("https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote",
+    JSON.stringify({videoid : "2", vote : "no"}));
+	}
 });	
 </script>	
 </div>
@@ -109,6 +130,16 @@ $(".btn").on("click", function() {
 		if (this.id == "agree-btn-3" || this.id == "disagree-btn-3"){
 	$('#agree-btn-3').prop('disabled', true);
 	$('#disagree-btn-3').prop('disabled', true);}
+	
+		if(this.id == "agree-btn-3"){
+		$.post("https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote",
+    JSON.stringify({videoid : "3", vote : "yes"}));
+	}
+	
+		if(this.id == "disagree-btn-3"){
+		$.post("https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote",
+    JSON.stringify({videoid : "3", vote : "no"}));
+	}
 });	
 </script>
 	
