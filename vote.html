@@ -39,8 +39,12 @@ map:
 <script>
 var $clickme = $('.clickme'),
     $box = $('.box');
+	$box2 = $('.box2');
+	$box3 = $('.box3');
 
 $box.hide();
+$box2.hide();
+$box3.hide();
 
 $clickme.click( function(e) {
     $(this).text(($(this).text() === 'Hide Video 1' ? 'Show Video 1' : 'Hide Video 1')).next('.box').slideToggle();;
