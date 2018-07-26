@@ -49,6 +49,32 @@ $(".btn").on("click", function() {
 <div class="box2">
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/Athletics?ref_src=twsrc%5Etfw">@Athletics</a> challenge call that Stephen Piscotty is out at 1B in the 6th; call overturned, runner is safe. <br><br>Powered by <a href="https://twitter.com/Mitel?ref_src=twsrc%5Etfw">@Mitel</a>. <a href="https://t.co/Lxjtx5TUNE">pic.twitter.com/Lxjtx5TUNE</a></p>&mdash; MLB Replay (@MLBReplays) <a href="https://twitter.com/MLBReplays/status/1022315668564107265?ref_src=twsrc%5Etfw">July 26, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!-- Button -->
+<div class="container">
+<p>
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success glyphicon glyphicon-thumbs-up" id="agree-btn-2">   Agree</button>
+
+<button type="button" class="btn btn-danger glyphicon glyphicon-thumbs-down" id="disagree-btn-2">   Disagree</button>
+</p>
+	
+	  
+    <div class="alert alert-danger fade">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <strong>Thanks for voting!</strong>
+    </div>
+  </div>
+</div>
+
+<script>
+$(".btn").on("click", function() {
+    $(".alert").removeClass("in").show();
+	$(".alert").delay(200).addClass("in").fadeOut(2000);
+	$('#agree-btn-2').prop('disabled', true);
+	$('#disagree-btn-2').prop('disabled', true);
+});	
+</script>	
 </div>
 
 <br>
@@ -56,6 +82,33 @@ $(".btn").on("click", function() {
 <div class="box3">
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/Dbacks?ref_src=twsrc%5Etfw">@Dbacks</a> challenge call that Ben Zobrist is safe at 3B in the 4th; call overturned, runner is out.<br><br>Powered by <a href="https://twitter.com/Mitel?ref_src=twsrc%5Etfw">@Mitel</a>. <a href="https://t.co/XNWTovnuw9">pic.twitter.com/XNWTovnuw9</a></p>&mdash; MLB Replay (@MLBReplays) <a href="https://twitter.com/MLBReplays/status/1022209760400048128?ref_src=twsrc%5Etfw">July 25, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<!-- Button -->
+<div class="container">
+<p>
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success glyphicon glyphicon-thumbs-up" id="agree-btn-3">   Agree</button>
+
+<button type="button" class="btn btn-danger glyphicon glyphicon-thumbs-down" id="disagree-btn-3">   Disagree</button>
+</p>
+	
+	  
+    <div class="alert alert-danger fade">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <strong>Thanks for voting!</strong>
+    </div>
+  </div>
+</div>
+
+<script>
+$(".btn").on("click", function() {
+    $(".alert").removeClass("in").show();
+	$(".alert").delay(200).addClass("in").fadeOut(2000);
+	$('#agree-btn-3').prop('disabled', true);
+	$('#disagree-btn-3').prop('disabled', true);
+});	
+</script>
+	
 </div>
 
 
