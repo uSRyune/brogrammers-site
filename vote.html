@@ -53,7 +53,11 @@ $(".btn").on("click", function() {
 });	
 </script>
 </div>
-
+<br>
+<br>
+<br>
+<br>
+<br>
 
 <a href="#" class="clickme2">Show Video 2</a>
 <div class="box2">
@@ -98,10 +102,6 @@ $(".btn").on("click", function() {
 </script>	
 </div>
 
-<br>
-<br>
-<br>
-<br>
 <br>
 <a href="#" class="clickme3">Show Video 3</a>
 <div class="box3">
@@ -152,14 +152,11 @@ $(".btn").on("click", function() {
 <script>
 var $clickme = $('.clickme'),
     $box = $('.box');
-
 $box.hide();
-
 $clickme.click( function(e) {
     $(this).text(($(this).text() === 'Hide Video 1' ? 'Show Video 1' : 'Hide Video 1')).next('.box').slideToggle();;
     e.preventDefault();
 });
-
 </script>
 
 
@@ -168,14 +165,11 @@ $clickme.click( function(e) {
 <script>
 var $clickme = $('.clickme2'),
 	$box2 = $('.box2');
-
 $box2.hide();
-
 $clickme.click( function(e) {
     $(this).text(($(this).text() === 'Hide Video 2' ? 'Show Video 2' : 'Hide Video 2')).next('.box2').slideToggle();;
     e.preventDefault();
 });
-
 </script>
 
 
@@ -183,9 +177,7 @@ $clickme.click( function(e) {
 <script>
 var $clickme = $('.clickme3'),
 	$box3 = $('.box3');
-
 $box3.hide();
-
 $clickme.click( function(e) {
     $(this).text(($(this).text() === 'Hide Video 3' ? 'Show Video 3' : 'Hide Video 3')).next('.box3').slideToggle();;
     e.preventDefault();
