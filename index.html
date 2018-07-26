@@ -11,72 +11,62 @@ description: Play-by-play voting platform
 
 
 <script>
-$(function() {
-  $('#carousel-example-generic').on('slide.bs.carousel', function() {
-    var iframe = $(this).find('.item.active iframe');
-    if(iframe.length > 0) {
-      console.log('stopped youtube video now since you moved to the next slide ');
-      iframe[0].contentWindow.postMessage('{"event": "command", "func":"stopVideo", "args": ""}', '*');
+var stlen = $('#slider .strip a').size();
+var stx = 0;
+var stpos = 0;
+var stspeed = 500;
+var stdelay = 5000;
+var stpause = false;
+var stto = null;
+var stwidth = 400;
+
+function sliderTopRun() {
+    if(!stpause) {
+        stx = stpos * -stwidth;
+        $('#slider .strip').animate({left: stx+'px'}, stspeed);
     }
-    // $('.item.active iframe')[0].contentWindow.postMessage('{"event": "command", "func":"pauseVideo", "args": ""}', '*')
-  });
-});	
+    if(stto) clearTimeout(stto);
+    stto = setTimeout(sliderTopNext, stdelay);
+}
+function sliderTopPrev() {
+    if(!stpause) {
+        stpos--;
+        if(stpos < 0) stpos = stlen - 1;
+    }
+    sliderTopRun();
+}
+function sliderTopNext() {
+    if(!stpause) {
+        stpos++;
+        if(stpos >= stlen) stpos = 0;
+    }
+    sliderTopRun();
+}
+$('#slider .strip').css('width', (stlen * stwidth)+'px');
+$('#slider .next').click(sliderTopNext);
+$('#slider .prev').click(sliderTopPrev);
+$('#slider .strip').hover(
+    function(e) { stpause = true; },
+    function(e) { stpause = false; }
+);
+sliderTopRun();	
 </script>
-		
-<div class="container">
-  <div class="col-sm-12">
-    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="">
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-	    
-      <div class="item">
-        <iframe width="100%" height="100%" src="//www.youtube.com/embed/jI-kpVh6e1U?controls=0&disablekb=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&playsinline=1" frameborder="0" allowfullscreen></iframe>
-        <div class="carousel-caption">
-          Youtube1
+<div id="slider">
+    <div class="btn prev">&lt;</div>
+    <div class="btn next">&gt;</div>
+    <div class="mask">
+        <div class="strip">
+            <a href="#">
+                <img src="http://placehold.it/400x300" alt="aze" />     
+            </a>
+            <a href="#">
+                <img src="http://placehold.it/400x300" alt="aze" />     
+            </a>
+            <a href="#">
+                <img src="http://placehold.it/400x300" alt="aze" />     
+            </a>
         </div>
-      </div>
-      
-      
-      <div class="item">
-        <iframe width="100%" height="100%" src="//www.youtube.com/embed/jI-kpVh6e1U?controls=0&disablekb=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&playsinline=1" frameborder="0" allowfullscreen></iframe>
-        <div class="carousel-caption">
-          Youtube2
-        </div>
-      </div>
-      
-      
-
-
     </div>
-    
-      <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-generic" data-slide-to="0" class="active">
-        <i class="fa fa-stop" aria-hidden="true"></i>
-      </li>
-      <li data-target="#carousel-example-generic" data-slide-to="1">
-        <i class="fa fa-stop" aria-hidden="true"></i>
-      </li>
-      <li data-target="#carousel-example-generic" data-slide-to="2" class="">
-        <i class="fa fa-play" aria-hidden="true"></i>
-      </li>
-      <li data-target="#carousel-example-generic" data-slide-to="3">
-        <i class="fa fa-stop" aria-hidden="true"></i>
-      </li>
-    </ol>
-      
-    <!-- Controls -->
-    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-      <i class="fa fa-chevron-left" aria-hidden="true"></i>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-      <i class="fa fa-chevron-right" aria-hidden="true"></i>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-  </div>
 </div>
 
 <br>
