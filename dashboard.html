@@ -39,22 +39,21 @@ $.ajax({
             }));
           console.log("Success calling Shane's API");
           console.log(data);
-          console.log("yes ---->" + data['yes']);
-          console.log("no ---->" + data['no']);
+
           console.log("Item ---->" + data['Item']['yes']);
-        });
-    }
-});
-  
-var chart = AmCharts.makeChart( "chartdiv", {
+          console.log("Item ---->" + data['Item']['no']);
+          var yesnum  = 60;
+          var nonum = 40;
+          
+          var chart = AmCharts.makeChart( "chartdiv", {
   "type": "pie",
   "theme": "light",
   "dataProvider": [ {
     "vote": "Agree",
-    "value": 50
+    "value": yesnum
   }, {
     "vote": "Disagree",
-    "value": 50
+    "value": nonum
   }],
   "valueField": "value",
   "titleField": "vote",
@@ -66,6 +65,14 @@ var chart = AmCharts.makeChart( "chartdiv", {
     "enabled": true
   }
 } );
+          
+          
+          
+        });
+    }
+});
+  
+
 </script>
 
 <!-- HTML -->
