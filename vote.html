@@ -20,16 +20,15 @@ map:
 <div class="container">
 <p>
 <!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success glyphicon glyphicon-thumbs-up">   Agree</button>
+<button type="button" class="btn btn-success glyphicon glyphicon-thumbs-up" id="agree-btn-1">   Agree</button>
 
-<button type="button" class="btn btn-danger glyphicon glyphicon-thumbs-down">   Disagree</button>
+<button type="button" class="btn btn-danger glyphicon glyphicon-thumbs-down" id="disagree-btn-1">   Disagree</button>
 </p>
 	
-  <div class="span4 pull-right">
 	  
     <div class="alert alert-danger fade">
       <button type="button" class="close" data-dismiss="alert">×</button>
-      <strong>You Agree!</strong> Thanks for voting..
+      <strong>Thanks for voting!</strong>
     </div>
   </div>
 </div>
@@ -38,6 +37,8 @@ map:
 $(".btn").on("click", function() {
     $(".alert").removeClass("in").show();
 	$(".alert").delay(200).addClass("in").fadeOut(2000);
+	$('#agree-btn-1').prop('disabled', true);
+	$('#disagree-btn-1').prop('disabled', true);
 });	
 </script>
 
