@@ -13,11 +13,27 @@ map:
 
 
 <a href="#" class="clickme">Show Video 1</a>
-
-
 <div class="box">
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/Rockies?ref_src=twsrc%5Etfw">@Rockies</a> challenge call that Kyle Tucker is safe at 2B in the 7th; call overturned, runner is out.<br><br>Powered by <a href="https://twitter.com/Mitel?ref_src=twsrc%5Etfw">@Mitel</a>. <a href="https://t.co/6as16Bwf7t">pic.twitter.com/6as16Bwf7t</a></p>&mdash; MLB Replay (@MLBReplays) <a href="https://twitter.com/MLBReplays/status/1022316547128225792?ref_src=twsrc%5Etfw">July 26, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<!-- Button -->
+<div class="container">
+  <div class="span10"><button class="btn1agree">Agree</button></div>
+  <div class="span4 pull-right">
+    <div class="alert alert-danger fade">
+      <button type="button" class="close" data-dismiss="alert">×</button>
+      <strong>Agree!</strong> Here is my message..
+    </div>
+  </div>
+</div>
+
+<script>
+$(".btn1agree").on("click", function() {
+    $(".alert").removeClass("in").show();
+	$(".alert").delay(200).addClass("in").fadeOut(2000);
+});	
+</script>
+
 </div>
 
 <br>
