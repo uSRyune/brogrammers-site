@@ -42,8 +42,8 @@ $.ajax({
 
           console.log("Item ---->" + data['Item']['yes']);
           console.log("Item ---->" + data['Item']['no']);
-          var yesnum  = 60;
-          var nonum = 40;
+          var yesnum  = data['Item']['yes'];
+          var nonum = data['Item']['no']);
           
           var chart = AmCharts.makeChart( "chartdiv", {
   "type": "pie",
