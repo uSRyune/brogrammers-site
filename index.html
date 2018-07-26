@@ -30,26 +30,14 @@ var chart = AmCharts.makeChart( "chartdiv", {
   "type": "pie",
   "theme": "light",
   "dataProvider": [ {
-    "country": "Lithuania",
-    "value": 260
+    "country": "Agree",
+    "value": 50
   }, {
-    "country": "Ireland",
-    "value": 201
-  }, {
-    "country": "Germany",
-    "value": 65
-  }, {
-    "country": "Australia",
-    "value": 39
-  }, {
-    "country": "UK",
-    "value": 19
-  }, {
-    "country": "Latvia",
-    "value": 10
-  } ],
+    "country": "Disagree",
+    "value": 50
+  }],
   "valueField": "value",
-  "titleField": "country",
+  "titleField": "Vote Split",
   "outlineAlpha": 0.4,
   "depth3D": 15,
   "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
