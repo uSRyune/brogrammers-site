@@ -16,7 +16,15 @@ description: Play-by-play voting platform
 	</div>
 </section>
 
-
+<script>
+$(document).ready(function () {
+$.getJSON('https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote', { get_param: 'value' }, function(data) {
+    $.each(data, function(index, element) {
+console.log(element.name);
+    });
+});
+});	
+</script>
 
 <div class="content">
 	<section>
