@@ -29,6 +29,8 @@ map:
 <script>
 var yes=0;
 var no =0;
+var return_first = function () {
+var tmp = null;  
 $.ajax({ 
     type: 'GET', 
     url: 'https://19r7c81ytj.execute-api.us-west-2.amazonaws.com/Prod/ReplayVote', 
@@ -48,10 +50,15 @@ $.ajax({
           
           yes = data['Item']['yes'];
           no = data['Item']['no'];
+          
+          tmp=yes;
         });
+          return tmp;
+}();
     }
 });
   
+  console.log(return_first);
 var chart = AmCharts.makeChart( "chartdiv", {
   "type": "pie",
   "theme": "light",
