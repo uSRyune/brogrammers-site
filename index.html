@@ -15,7 +15,7 @@ $(function() {
   $('#carousel-example-generic').on('slide.bs.carousel', function() {
     var iframe = $(this).find('.item.active iframe');
     if(iframe.length > 0) {
-      console.log('stop youtube video');
+      console.log('stopped youtube video now since you moved to the next slide ');
       iframe[0].contentWindow.postMessage('{"event": "command", "func":"stopVideo", "args": ""}', '*');
     }
     // $('.item.active iframe')[0].contentWindow.postMessage('{"event": "command", "func":"pauseVideo", "args": ""}', '*')
