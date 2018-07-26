@@ -21,14 +21,14 @@ map:
 </div>
 
 <br>
-<a href="#" class="clickme">Show Video 2</a>
+<a href="#" class="clickme2">Show Video 2</a>
 <div class="box2">
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/Rockies?ref_src=twsrc%5Etfw">@Rockies</a> challenge call that Kyle Tucker is safe at 2B in the 7th; call overturned, runner is out.<br><br>Powered by <a href="https://twitter.com/Mitel?ref_src=twsrc%5Etfw">@Mitel</a>. <a href="https://t.co/6as16Bwf7t">pic.twitter.com/6as16Bwf7t</a></p>&mdash; MLB Replay (@MLBReplays) <a href="https://twitter.com/MLBReplays/status/1022316547128225792?ref_src=twsrc%5Etfw">July 26, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
 <br>
-<a href="#" class="clickme">Show Video 3</a>
+<a href="#" class="clickme3">Show Video 3</a>
 <div class="box3">
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">.<a href="https://twitter.com/Rockies?ref_src=twsrc%5Etfw">@Rockies</a> challenge call that Kyle Tucker is safe at 2B in the 7th; call overturned, runner is out.<br><br>Powered by <a href="https://twitter.com/Mitel?ref_src=twsrc%5Etfw">@Mitel</a>. <a href="https://t.co/6as16Bwf7t">pic.twitter.com/6as16Bwf7t</a></p>&mdash; MLB Replay (@MLBReplays) <a href="https://twitter.com/MLBReplays/status/1022316547128225792?ref_src=twsrc%5Etfw">July 26, 2018</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -39,29 +39,45 @@ map:
 <script>
 var $clickme = $('.clickme'),
     $box = $('.box');
-	$box2 = $('.box2');
-	$box3 = $('.box3');
 
 $box.hide();
-$box2.hide();
-$box3.hide();
 
 $clickme.click( function(e) {
     $(this).text(($(this).text() === 'Hide Video 1' ? 'Show Video 1' : 'Hide Video 1')).next('.box').slideToggle();;
     e.preventDefault();
 });
 
+</script>
+
+
+
+<!-- Video 2 -->
+<script>
+var $clickme = $('.clickme2'),
+	$box2 = $('.box2');
+
+$box2.hide();
+
 $clickme.click( function(e) {
     $(this).text(($(this).text() === 'Hide Video 2' ? 'Show Video 2' : 'Hide Video 2')).next('.box2').slideToggle();;
     e.preventDefault();
 });
+
+</script>
+
+
+<!-- Video 3 -->
+<script>
+var $clickme = $('.clickme3'),
+	$box3 = $('.box3');
+
+$box3.hide();
 
 $clickme.click( function(e) {
     $(this).text(($(this).text() === 'Hide Video 3' ? 'Show Video 3' : 'Hide Video 3')).next('.box3').slideToggle();;
     e.preventDefault();
 });
 </script>
-
 
 
 
