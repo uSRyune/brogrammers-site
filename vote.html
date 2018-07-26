@@ -9,6 +9,26 @@ map:
   address: "1 George Street, Dunedin, New Zealand"
   zoom: 13
 ---
+
+<script>
+var $clickme = $('.clickme'),
+    $box = $('.box');
+
+$box.hide();
+
+$clickme.click( function(e) {
+    $(this).text(($(this).text() === 'Hide' ? 'Show' : 'Hide')).next('.box').slideToggle();;
+    e.preventDefault();
+});
+</script>
+
+<a href="#" class="clickme">Show</a>
+<div class="box">
+    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+</div>
+
+
+
 <div class="map" id="map"></div>
 
 
