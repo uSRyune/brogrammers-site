@@ -28,10 +28,11 @@ var $clickme = $('.clickme'),
 $box.hide();
 
 $clickme.click( function(e) {
-    $(this).text(($(this).text() === 'Hide' ? 'Show' : 'Hide')).next('.box').slideToggle();
-    console.log("button 1 clicked....");
-    e.prevent Default();
+    $(this).text(($(this).text() === 'Hide' ? 'Show' : 'Hide')).next('.box').slideToggle();;
+    e.preventDefault();
 });
+
+
 </script>
 
 
