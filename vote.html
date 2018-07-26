@@ -22,7 +22,7 @@ map:
   <!-- BUTTON TYPES -->
 <p>
 <!-- Indicates a successful or positive action -->
-<button type="button" class="btn1agree btn-success">Success</button>
+<button type="button" class="btn btn-success">Agree</button>
 </p>
 	
   <div class="span4 pull-right">
@@ -35,7 +35,7 @@ map:
 </div>
 
 <script>
-$(".btn1agree").on("click", function() {
+$(".btn").on("click", function() {
     $(".alert").removeClass("in").show();
 	$(".alert").delay(200).addClass("in").fadeOut(2000);
 });	
