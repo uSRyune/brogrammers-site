@@ -30,14 +30,14 @@ var chart = AmCharts.makeChart( "chartdiv", {
   "type": "pie",
   "theme": "light",
   "dataProvider": [ {
-    "country": "Agree",
+    "vote": "Agree",
     "value": 50
   }, {
-    "country": "Disagree",
+    "vote": "Disagree",
     "value": 50
   }],
   "valueField": "value",
-  "titleField": "Vote Split",
+  "titleField": "vote",
   "outlineAlpha": 0.4,
   "depth3D": 15,
   "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
