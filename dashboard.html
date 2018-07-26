@@ -40,6 +40,9 @@ $.ajax({
             }));
           console.log("Success calling Shane's API");
           console.log(data);
+          var obj = JSON.parse(data);
+          console.log("yes ---->" + obj.yes);
+          console.log("no ---->" + obj.no);
         });
     }
 });
