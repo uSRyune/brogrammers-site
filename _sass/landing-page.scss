@@ -1,3 +1,94 @@
+@screen-sm:                  768px;
+@screen-sm-min:              @screen-sm;
+@carousel-control-font-size:                  20px;
+
+body {
+  background: grey;
+}
+
+.carousel {
+  background: #fff;
+  position: relative;
+  .carousel-inner {
+    & > .item {
+      height: 350px;
+      background: #000;
+    }
+    .item img {
+      width: 100%;
+      margin: auto;
+      position:relative;
+      top:50%;
+      transform: translateY(-50%);
+    }
+  }
+  .carousel-indicators {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    padding: 5px 0;
+    width: 100%;
+    margin: 0;
+    font-size: 18px;
+    li {
+      text-indent: 0;
+      border: none;
+      border-radius: none;
+      color: #c5c5c5;
+      margin: 0 3px;
+      width: initial;
+      &.active {
+        background: none;
+        color: #79abd0;
+        margin: 0 2px;
+        width: initial;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: @screen-sm-min) {
+  
+  
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: left;
+    padding: 5px 30px;
+    z-index: 10;
+  }
+
+  .carousel-control {
+    z-index: 9;
+    color: #4c4c4c;
+    &.left, &.right {
+      width: 100px;
+      opacity: 1;
+      background: none;
+      .fa {
+        width: 30px;
+        height: 30px;
+        margin-top: -15px;
+        position: absolute;
+        top: 50%;
+        display: inline-block;
+      }
+      .fa-chevron-left {
+        left: 10px;
+      }
+      .fa-chevron-right {
+        right: 10px;
+      }
+    }
+  }
+}
+
+
+
+
 .bottom-cta {
 	background: linear-gradient(to bottom, $brand-color 0%, $middle-gradient-color 100%);
 	color: #fff;
